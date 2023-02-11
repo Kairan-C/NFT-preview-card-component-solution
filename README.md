@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://khyaran.github.io/NFT-preview-card-component-solution/](https://khyaran.github.io/NFT-preview-card-component-solution/)
 
 ## My process
 
