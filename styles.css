@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --Soft_blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Overlay: hsla(178, 100%, 50%, 40%);
+
+  /*Neutral*/
+  /* card BG color */
+  --card_bg_blue: hsl(217, 54%, 11%);
+  /* main BG color */
+  --main_bg_blue: hsl(216, 50%, 16%);
+  /* line */
+  --line_blue: hsl(215, 32%, 27%);
+
+  --White: hsl(0, 0%, 100%);
+
+  /* font 300, 400, 600 */
+  --Outfit: "Outfit", sans-serif;
+
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--card_bg_blue);
+  margin: 0;
+}
+
+.card {
+  background-color: var(--main_bg_blue);
+  max-width: 35rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.img-wrapper {
+  position: relative;
+}
+.img-wrapper::after {
+  content: "";
+  position: absolute;
+  border-radius: 1rem;
+  inset: 0 0 0 0;
+  background-color: var(--Overlay);
+  visibility: hidden;
+}
+.img-wrapper:hover::after {
+  visibility: visible;
+  cursor: pointer;
+}
+.img-wrapper .view-icon {
+  position: absolute;
+  inset: 0 0 0 0;
+  margin: auto auto;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.img-wrapper:hover .view-icon {
+  visibility: visible;
+}
+.card-image {
+  display: block;
+  max-width: 100%;
+  max-height: auto;
+  border-radius: 1rem;
+}
+
+.card-image:hover {
+  cursor: pointer;
+}
+
+.subheader {
+  color: var(--White);
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.subheader:hover {
+  cursor: pointer;
+  color: var(--Cyan);
+}
+
+.card p {
+  color: var(--Soft_blue);
+  font-size: 1.8rem;
+}
+.balance,
+.subheader,
+.description {
+  font-family: var(--Outfit);
+  margin: 2rem 0 0 0;
+}
+.balance {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+.balance li {
+  color: var(--Cyan);
+  list-style: none;
+  font-size: 1.8rem;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+.balance li:last-of-type {
+  color: var(--Soft_blue);
+  font-weight: 300;
+}
+
+.vertical-align {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+.credits::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.2rem;
+  background-color: var(--line_blue);
+  margin: 2rem 0;
+}
+.credits {
+  font-family: var(--Outfit);
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.avatar {
+  border: solid 0.1rem var(--White);
+  border-radius: 50%;
+  height: 3rem;
+  width: auto;
+}
+.user_profile {
+  text-decoration: none;
+  color: var(--White);
+}
+.user_profile:hover {
+  color: var(--Cyan);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0%;
+  font-size: 11px;
+  text-align: center;
+  color: var(--White);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
